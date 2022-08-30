@@ -455,7 +455,7 @@
                 document.getElementById("upcomings").addEventListener("click", function (){
                     var tableHistory = document.querySelector('#upcoming tbody');
                     tableHistory.innerHTML = '';
-                    firebase.firestore().collection("schedule").where('match_date', '==', '').orderBy('match_date', 'desc').get().then((querySnapshot) => {
+                    firebase.firestore().collection("schedule").where('match_date', '==', '').get().then((querySnapshot) => {
                         querySnapshot.forEach((doc) => {
                             let tr = document.createElement('tr');
                             let matchid = document.createElement('td');
