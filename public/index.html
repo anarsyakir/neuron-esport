@@ -278,7 +278,6 @@
 
                 document.getElementById("signIn").addEventListener("click", function (){
                     var provider = new firebase.auth.GoogleAuthProvider();
-                    provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
                     firebase.auth().useDeviceLanguage();
                     firebase.auth()
                     .signInWithPopup(provider)
